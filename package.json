@@ -4,11 +4,13 @@
   "description": "",
   "main": "handler.js",
   "scripts": {
+    "dev": "serverless offline start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "middy": "^0.34.0",
     "serverless": "^1.65.0",
     "serverless-offline": "^5.12.1"
   }

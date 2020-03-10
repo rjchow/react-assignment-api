@@ -1,10 +1,10 @@
-"use strict";
-
-
 const movieResponse = require("./movies.json")
+const middy = require('middy')
+const { cors } = require('middy/middlewares')
 
 
-module.exports.hello = async event => {
+
+const handler = async (event) => {
   const random = Math.random();
   if (random < 0.15) {
     // error
@@ -23,6 +23,8 @@ module.exports.hello = async event => {
     body: JSON.stringify(movieResponse,
       null,
       2
-    )
+      )
+    };
   };
-};
+  
+  module.exports.hello = middy(handler).use(cors())
