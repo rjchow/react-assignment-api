@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "middy": "^0.34.0",
-    "serverless": "^1.65.0",
+    "serverless": "^3.25.1",
     "serverless-offline": "^5.12.1"
   }
 }
